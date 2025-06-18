@@ -1,0 +1,11 @@
+# Ignore the virtual environment
+card_env/
+
+# Ignore checkpoints and cached files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ignore large or unnecessary files
+*.zip
+cards_dataset/
