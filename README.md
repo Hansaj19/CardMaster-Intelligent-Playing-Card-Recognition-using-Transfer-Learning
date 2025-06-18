@@ -53,7 +53,8 @@ python app.py
 # Notes
 Dataset are excluded from GitHub to keep repo clean.
 ### To download the dataset, run the following script in Notebook once.
----
+
+```python
 !mkdir -p ~/.kaggle
 !copy kaggle.json ~/.kaggle/
 !chmod 600 ~/.kaggle/kaggle.json
@@ -62,5 +63,6 @@ Dataset are excluded from GitHub to keep repo clean.
 import zipfile
 with zipfile.ZipFile("cards-image-datasetclassification.zip", 'r') as zip_ref:
     zip_ref.extractall("cards_dataset")
----
+```
+
 Make sure to place dataset manually or download as instructed above.
