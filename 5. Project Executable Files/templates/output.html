@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CardMaster Detection Result</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f6f6f6;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #000;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      border-bottom: 2px solid red;
+    }
+
+    .main-content {
+      position: relative;
+      background: url('/static/images/pexels-pixabay-279009.jpg') no-repeat center center/cover;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .main-content::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .card-box {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .card-box p.title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .card-box img {
+      width: 180px;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-box p.prediction {
+      color: red;
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">CARDMASTER</div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/input">Predict</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content with background -->
+  <div class="main-content">
+    <div class="card-box">
+      <p class="title">Result of Playing Card</p>
+      <img src="/static/images/{{ image_filename }}" alt="Uploaded Card">
+      <p class="prediction">🃏 Detected Card: <strong>{{ card }}</strong></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 CardMaster. All rights reserved.
+  </footer>
+
+</body>
+</html>

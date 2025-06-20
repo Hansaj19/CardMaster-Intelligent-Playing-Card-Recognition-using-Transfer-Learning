@@ -1,0 +1,253 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CardMaster – Home</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+
+    nav {
+      background-color: #000;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      border-bottom: 2px solid red;
+    }
+
+    section {
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+        z-index: 0;
+        }
+
+    .hero {
+        position: relative;
+        background: url('/static/images/pexels-pixabay-279009.jpg') no-repeat center center/cover;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        padding: 40px;
+        z-index: 1;
+        }
+
+    .hero * {
+        position: relative;
+        z-index: 1;
+        }
+
+
+    .hero h1 {
+      font-size: 48px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 20px 0;
+      max-width: 600px;
+    }
+
+    .hero a {
+      text-decoration: none;
+      background: red;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .about h2,
+    .contact h2 {
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .about p,
+    .contact p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .contact form {
+      margin-top: 30px;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .footer {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">CARDMASTER</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="/input">Predict</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to CardMaster</h1>
+    <p>Intelligent Playing Card Recognition using Transfer Learning.</p>
+    <a href="/input">Get Started</a>
+  </section>
+
+  <!-- About Us Section -->
+<section class="about" id="about" style="padding: 80px 40px; text-align: center;">
+  <h2 style="color: red; font-size: 32px; margin-bottom: 20px;">Learn More About Us</h2>
+
+  <p style="max-width: 900px; margin: auto; font-size: 18px; line-height: 1.6;">
+    CardMaster is a pioneering solution dedicated to bridging the gap between physical card games and digital intelligence. 
+    Built on a powerful deep learning model trained on 8,154 playing card images, it enables real-time, accurate card detection 
+    for applications like smart gaming, casino surveillance, and interactive learning.
+  </p>
+
+  <br>
+
+  <p style="max-width: 900px; margin: auto; font-size: 18px; line-height: 1.6;">
+    With transfer learning at its core, CardMaster ensures fast, cost-efficient recognition without compromising accuracy. 
+    Whether you're a developer, a gamer, or a security professional, CardMaster delivers speed, intelligence, and innovation in one solution.
+  </p>
+</section>
+
+
+ <!-- Gaming Automation Section with Background -->
+<section class="about" id="automation" style="
+  background: url('/static/images/cards.jpg') no-repeat center center/cover;
+  padding: 80px 40px;
+  color: white;
+  text-align: center;
+  position: relative;
+">
+
+  <!-- Optional dark overlay -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  "></div>
+
+  <!-- Content on top of overlay -->
+  <div style="position: relative; z-index: 1;">
+
+    <h2 style="color: #fff;">Gaming Automation</h2>
+    <p style="max-width: 800px; margin: auto;">
+      In digital gaming platforms, card classification can automate processes such as card identification in online poker or bridge games.
+    </p>
+
+    <!-- Feature Cards -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+
+      <div style="max-width: 250px; background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px;">
+        <img src="/static/images/casino.jpg" alt="Casino Surveillance" style="width: 100%; border-radius: 8px;">
+        <p><strong>📹 Casino Surveillance</strong><br>Enhance security and integrity with AI-driven recognition systems.</p>
+      </div>
+
+      <div style="max-width: 250px; background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px;">
+        <img src="/static/images/gaming.jpg" alt="Online Gaming Platforms" style="width: 100%; border-radius: 8px;">
+        <p><strong>🎮 Online Gaming Platforms</strong><br>Automate card recognition in online games for smarter play.</p>
+      </div>
+
+      <div style="max-width: 250px; background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px;">
+        <img src="/static/images/tablet.jpg" alt="Learning Tools" style="width: 100%; border-radius: 8px;">
+        <p><strong>📘 Interactive Learning Tools</strong><br>Teach card strategies and rules with real-time AI help.</p>
+      </div>
+
+      <div style="max-width: 250px; background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px;">
+        <img src="/static/images/speed.jpg" alt="Efficiency" style="width: 100%; border-radius: 8px;">
+        <p><strong>⚡ Efficiency</strong><br>Speed up gameplay and reduce friction with instant recognition.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Contact Us Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, feel free to reach out. We’d love to hear from you.</p>
+
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 CardMaster | All Rights Reserved
+  </div>
+
+</body>
+</html>
