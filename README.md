@@ -1,4 +1,4 @@
-# Card Classification using VGG16 🃏🧠
+# Card Classification using Transfer Learning 🃏🧠
 
 A deep learning-based project to classify different playing cards using convolutional neural networks (CNN) and the VGG16 architecture.  
 This is part of our academic project submission at VIT University.
@@ -19,7 +19,7 @@ This is part of our academic project submission at VIT University.
 | **Data Collection.../** | Data sources, quality check, preprocessing |
 | **Model Development/** | Model selection, training Jupyter notebook |
 | **Model Optimization.../** | Tuning report |
-| **Project Executable Files/** | Flask app, trained model (`VGG16_model.h5`), test code |
+| **Project Executable Files/** | Flask app, trained model (`xception_model.h5`), test code |
 | **Documentation & Demonstration/** | Final PDF and mp4 demo |
 
 ---
